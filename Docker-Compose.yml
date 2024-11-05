@@ -1,7 +1,3 @@
-# P6-Configuraci-n-CLientes-Servidor-DNS
-
-Primeramente comenzaremos por crear y configurar nuestro archivo yml para poder configurar las redes que vamos a necesitar nuestro Cliente-Servidor.El código que usaremos es el siguiente:
-```
 version: '3'
 
 services:
@@ -41,14 +37,4 @@ networks:
         - subnet: "172.28.0.0/16"  # Definir el rango de subred
           ip_range: "172.28.5.0/24"  # Rango de IPs para los contenedores
           gateway: "172.28.5.254"  # Puerta de enlace de la red
-          ```
-```
-**Primero utilizamos apk update**
-**Segundo utilizamos apk add bind-tools
-
-
-
-
-Como ultimo para comprobar o dig facemos dig a @172.28.5.1 test.asircastelao.int
-Ea resposta foi a seguinte: **test.asircastelao.int.	38400	IN	A	172.28.5.4**
 
