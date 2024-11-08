@@ -45,6 +45,8 @@ networks:
 ```
 **Para este código yml lo que utilizamos fue la base que ya estaba creada y subida en el github de damián lo que hice yo aparte fue otro archivo yml aparte con la red creada dentro de el y con ayuda de chat gpt le pedí que me juntara estos dos archivos.**
 
+**Agora temos que crear e copiar as carpetas zoas e conf dentro do directorio, porque si non os servers non se configuraran e logo zoas sen este arquivo non podremos facer dig mais adiante para poder comprobar que todo esta feito correctamente.**
+
 Una vez configurado el archivo lo que haremos sera levantar los contenedores que tenemos configurados para ello utilizaremos el siguiente comando.
 ```
 docker compose up
