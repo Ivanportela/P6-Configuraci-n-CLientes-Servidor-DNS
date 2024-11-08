@@ -43,12 +43,30 @@ networks:
           gateway: "172.28.5.254"  # Puerta de enlace de la red
           ```
 ```
-**Primero utilizamos apk update**
-**Segundo utilizamos apk add bind-tools
+**Para este código yml lo que utilizamos fue la base que ya estaba creada y subida en el github de damián lo que hice yo aparte fue otro archivo yml aparte con la red creada dentro de el y con ayuda de chat gpt le pedí que me juntara estos dos archivos.**
 
+Una vez configurado el archivo lo que haremos sera levantar los contenedores que tenemos configurados para ello utilizaremos el siguiente comando.
+```
+docker compose up
+```
+Se puede añadir el -d para que libere la terminal pero para mi es mas cómodo y más facil de visualizar al tener otra terminal en ejecución. 
 
+**Una vez con los contenedores accederemos a nuestro contenedor cliente que en este caso es: "P6_apline", para ello utilizaremos:**
+```
+docker exec -it P6_apline /bin/sh
+```
+Una vez dentro para comprobar que tenemos conexión entre los servidores primero deberemos de seguir una seria de pasos y tendremos que descargar ciertas herramientas para poder hacer un DIG dentro de la máquina.
 
+**Para ello utilizaremos los siguientes comandos por orden:**
+```
+apk update
+apk add bind-tools
+```
 
-Como ultimo para comprobar o dig facemos dig a @172.28.5.1 test.asircastelao.int
-Ea resposta foi a seguinte: **test.asircastelao.int.	38400	IN	A	172.28.5.4**
+Con estos dos comandos non debería de haber ningún problema para poder realizar o dig.
 
+**Como ultimo para comprobar o dig facemos dig a @172.28.5.1 test.asircastelao.int**
+E a miña resposta foi a seguinte: 
+```
+**test.asircastelao.int.	38400	IN	A	172.28.5.4**
+``
